@@ -40,12 +40,14 @@ window.onload = function() {
           <h2 style= "color: ${color}">${palosCardRand}</h2>
         </div>
         <div class="number col-4 mx-auto align-self-center">
-          <h1 style = "width: 100% ">${numberCardRand}</h1>
+          <h1 style= "width: 100%">${numberCardRand}</h1>
         </div>
         <div class="symbolDown col-4 align-content-end">
-          <h2 style = "color : ${color}" ; >${palosCardRand}</h2>
+          <h2 style="color : ${color}" ; >${palosCardRand}</h2>
         </div>
       </div>
-    </div>`;
+    `;
   renderCard.innerHTML = html2;
+
+  let botonRecargar = document.querySelector("#boton");
 };
