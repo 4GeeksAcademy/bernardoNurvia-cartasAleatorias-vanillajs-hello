@@ -1,7 +1,5 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
-
 .body {
-  background-color: green;
+  background-color: rgba(17, 105, 9, 0.808);
 }
 .card {
   width: 10rem;
@@ -10,11 +8,10 @@
 }
 .symbolUp {
   margin-bottom: 100%;
-  text-shado: ;
 }
 .number {
-  margin-block: 50%;
 }
 .symbolDown {
   margin-top: 100%;
+  transform: rotate(180deg);
 }
