@@ -32,7 +32,7 @@ window.onload = function() {
   let numberCardRand = randomSelection(numberCar);
   console.log(palosCardRand, numberCardRand);
 
-  let renderCard = document.querySelector("#renderCard");
+  let renderCard = document.querySelector(".renderCard");
 
   let html2 = `<div class="card container text-center">
       <div class="row">
@@ -49,7 +49,9 @@ window.onload = function() {
     `;
   renderCard.innerHTML = html2;
 
-  function cambiarCarta() {
-    location.reload();
+  let botonCambiaCarta = document.getElementsByClassName("boton");
+
+  function changeCard() {
+    renderCard.innerHTML = html2;
   }
 };
