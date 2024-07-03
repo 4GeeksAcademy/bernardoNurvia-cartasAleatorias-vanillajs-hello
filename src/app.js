@@ -49,5 +49,7 @@ window.onload = function() {
     `;
   renderCard.innerHTML = html2;
 
-  let botonRecargar = document.querySelector("#boton");
+  function cambiarCarta() {
+    location.reload();
+  }
 };
