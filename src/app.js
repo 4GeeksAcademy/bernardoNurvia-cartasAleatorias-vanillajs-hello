@@ -4,12 +4,9 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+import { eventListeners } from "@popperjs/core";
 
-window.onload = function() {
-  //write your code here
-
-  //constates palos:
-
+function generarCarta() {
   const palos = ["♠", "♣", "♥", "♦"];
 
   //variables de numeros:
@@ -20,12 +17,6 @@ window.onload = function() {
     let index = Math.floor(Math.random() * array.length);
     return array[index];
   }
-  //variables aleatorias:
-  /*if (palosCardRand === "♥" || palosCardRand === "♦") {
-    return palosCardRand + numberCardRand, "color: red;";
-  } else {
-    console.log(palosCardRand + numberCardRand);
-  }*/
 
   let palosCardRand = randomSelection(palos);
   let color = palosCardRand === "♥" || palosCardRand === "♦" ? "red" : "black";
@@ -48,10 +39,14 @@ window.onload = function() {
       </div>
     `;
   renderCard.innerHTML = html2;
+}
+window.onload = function() {
+  //write your code here
+  generarCarta();
+  //constates palos:
 
-  let botonCambiaCarta = document.getElementsByClassName("boton");
-
-  function changeCard() {
-    renderCard.innerHTML = html2;
-  }
+  let boton = document.getElementById("boton");
+  addEventListener("click", () => {
+    generarCarta();
+  });
 };
